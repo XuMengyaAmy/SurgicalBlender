@@ -1,0 +1,5 @@
+checkpoints/*
+results/*
+.vscode/*
+VSworkspace.code-workspace
+*.pyc
