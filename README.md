@@ -5,13 +5,14 @@ Surgical Blender is an open-source surgical dataset generation framework that in
 
 Project page is available from [here](https://sites.google.com/view/surgicalblender/home) for video demonstration.
 
-
-# Dataset
+# Task 1: Segmentation
+### Dataset
 Fully-synthetic video dataset is available in : https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/fully-synthetic-dataset?csf=1&web=1&e=uOc8R7
 
 Semi-synthetic video dataset is available in : https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/semi-synthetic-dataset?csf=1&web=1&e=e8xbtB
 
-# Evaluation
+
+## Evaluation
 ## 1.Download pretrained model
 To reproduce the results of DeepLabv3+ and LinkNet34 by using different datasets reported in our paper, first download the pretrained model file: https://drive.google.com/drive/folders/181lxqt1V43ki5AMRxQzuw_yQqW3xatxc?usp=sharing
 
@@ -60,7 +61,7 @@ Run  `python test.py --model DeepLabv3_plus --type binary --checkpoint /Surgical
 *LinkNet34*  </br>
 Run  `python test.py --model LinkNet34 --type binary --checkpoint /SurgicalBlender/Segmentation/runs/bleeding_source_segmentation/LinkNet34/best_model.pt`
 
-# Training
+## Training
 
 ## 1. Sim-to-Real instrument segmentation
 
@@ -68,7 +69,9 @@ Run  `python test.py --model LinkNet34 --type binary --checkpoint /SurgicalBlend
 
 
 
-## 4. Image-to-Image Translation: Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
+# Task 2: Image-to-Image Translation (De-Blood and De-Smoke)
+
+Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
 
 <img src = "DeBlood_DeSmoke/imgs/VisualComparison.png" width=961>
 
