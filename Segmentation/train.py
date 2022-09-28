@@ -77,6 +77,9 @@ def main():
     #add 50 real dataset images into train dataset
     arg('--add_real', type=str, default='False')
 
+    #change dataset
+    arg('--dataset', type=str, default='semi_part')
+
     args = parser.parse_args()
 
     root = Path(args.root)
@@ -141,7 +144,7 @@ def main():
             pin_memory=torch.cuda.is_available()
         )
 
-    train_file_names, val_file_names = get_split(args.fold, args.add_real)
+    train_file_names, val_file_names = get_split(args.dataset, args.fold, args.add_real)
 
     print('num train = {}, num_val = {}'.format(len(train_file_names), len(val_file_names)))
     # num train = 3848, num_val = 483

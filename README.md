@@ -1,4 +1,5 @@
 # SurgicalBlender
+Project page is available from [here](https://sites.google.com/view/surgicalblender/home) for video demonstration.
 
 # Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
 

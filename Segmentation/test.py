@@ -81,6 +81,7 @@ def main():
     # ======== for test ======= #
     arg('--checkpoint', type=str, required=True)
     arg('--add_real', type=str, default='False')
+    arg('--dataset', type=str, default='semi_part')
     # /mnt/disk1_ssd/mengya/robot-surgery-segmentation/runs/mask_blood/UNet16/best_model.pt
     # ========================= #
 
@@ -144,7 +145,7 @@ def main():
             pin_memory=torch.cuda.is_available()
         )
 
-    train_file_names, val_file_names = get_split(args.fold, args.add_real)
+    train_file_names, val_file_names = get_split(args.dataset, args.fold)
 
     print('num train = {}, num_val = {}'.format(len(train_file_names), len(val_file_names)))
     # num train = 3848, num_val = 483

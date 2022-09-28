@@ -67,14 +67,16 @@ def load_image(path):
     return cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 
-def load_mask(path, problem_type):
+def load_mask(path, problem_type, change_test_set='False'):
 
     if problem_type == 'binary':
         mask_folder = 'mask_blood'
         factor = prepare_data.binary_factor
-        mask = cv2.imread(str(path).replace('image', mask_folder), 0) #for trainingg on  Fully-synthetic dataset 
-        # mask = cv2.imread(str(path).replace('image', mask_folder).replace('jpg','png'), 0) #for valiidation on real dataset
-
+        if change_test_set == 'True':
+            mask = cv2.imread(str(path).replace('image', mask_folder).replace('jpg','png'), 0) #for valiidation on real dataset
+        else:
+            mask = cv2.imread(str(path).replace('image', mask_folder), 0) #for trainingg on  Fully-synthetic dataset 
+            
     elif problem_type == 'parts':
         mask_folder = 'parts_masks'
         factor = prepare_data.parts_factor
