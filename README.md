@@ -3,18 +3,19 @@ This repository includes the reference code and dataset mentioned in the paper *
 
 Surgical Blender is an open-source surgical dataset generation framework that integrates with smoke, blood, and vessel vibration to generate realistic surgical videos with rich annotations. We demonstrate the effectiveness of Surgical Blender by developing 17 synthetic surgical videos and 7 semi-synthetic surgical videos for tasks ranging from segmentation tasks (surgical instrument segmentation and bleeding source segmentation) to image-to-image translation (smoke removal and blood removal). 
 
-Project page is available from [here](https://sites.google.com/view/surgicalblender/home) for video demonstration.
+Please access our [Project page](https://sites.google.com/view/surgicalblender/home) for video demonstration.
 
 # Task 1: Segmentation
 ### Dataset
-Fully-synthetic video dataset is available from [here](https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/fully-synthetic-dataset?csf=1&web=1&e=uOc8R7)
+Please download our synthetic Video Dataset:
+[Fully-synthetic video dataset](https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/fully-synthetic-dataset?csf=1&web=1&e=uOc8R7)
 
-Semi-synthetic video dataset is available from [here](https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/semi-synthetic-dataset?csf=1&web=1&e=e8xbtB)
+[Semi-synthetic video dataset](https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/semi-synthetic-dataset?csf=1&web=1&e=e8xbtB)
 
 
 ## Evaluation
 ## 1.Download pretrained model
-To reproduce the results of DeepLabv3+ and LinkNet34 by using different datasets reported in our paper, first download the pretrained model file: https://drive.google.com/drive/folders/181lxqt1V43ki5AMRxQzuw_yQqW3xatxc?usp=sharing
+To reproduce the results of DeepLabv3+ and LinkNet34 by using different datasets reported in our paper, first download the [pretrained models](https://drive.google.com/drive/folders/181lxqt1V43ki5AMRxQzuw_yQqW3xatxc?usp=sharing)
 
 
 ## 2.Sim-to-Real instrument segmentation 
