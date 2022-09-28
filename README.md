@@ -3,8 +3,6 @@ This repository includes the reference code and dataset mentioned in the paper *
 
 Surgical Blender is an open-source surgical dataset generation framework that integrates with smoke, blood, and vessel vibration to generate realistic surgical videos with rich annotations. We demonstrate the effectiveness of Surgical Blender by developing 17 synthetic surgical videos and 7 semi-synthetic surgical videos for tasks ranging from segmentation tasks (surgical instrument segmentation and bleeding source segmentation) to image-to-image translation (smoke removal and blood removal). 
 
-![img](workflow_v4.png)
-
 Project page is available from [here](https://sites.google.com/view/surgicalblender/home) for video demonstration.
 
 
@@ -70,7 +68,7 @@ Run  `python test.py --model LinkNet34 --type binary --checkpoint /SurgicalBlend
 
 
 
-# Image-to-Image Translation: Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
+## 4. Image-to-Image Translation: Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
 
 <img src = "DeBlood_DeSmoke/imgs/VisualComparison.png" width=961>
 
