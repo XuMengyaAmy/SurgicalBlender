@@ -2,7 +2,7 @@
 
 # Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
 
-<img src = "imgs/VisualComparison.png" width=961>
+<img src = "DeBlood_DeSmoke/imgs/VisualComparison.png" width=961>
 
 ## Model train/test
 ### Install
