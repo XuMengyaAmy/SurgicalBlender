@@ -3,3 +3,4 @@ results/*
 .vscode/*
 VSworkspace.code-workspace
 *.pyc
+*.pth

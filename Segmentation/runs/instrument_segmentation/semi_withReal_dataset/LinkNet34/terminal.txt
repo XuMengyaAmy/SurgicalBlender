@@ -1,0 +1,262 @@
+(ToolSeg) ren3@ren3:/mnt/disk1_ssd/mengya/new-semi-robot-surgery-segmentation$ python train.py --model LinkNet34 --type instruments --root runs_mengya/semisyn_withReal_dataset/LinkNet34 --add_real True
+['/mnt/disk1_ssd/mengya/new-semi-robot-surgery-segmentation', '/home/ren3/miniconda3/envs/ToolSeg/lib/python38.zip', '/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8', '/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8/lib-dynload', '/home/ren3/.local/lib/python3.8/site-packages', '/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8/site-packages']
+['/mnt/disk1_ssd/mengya/new-semi-robot-surgery-segmentation', '/home/ren3/miniconda3/envs/ToolSeg/lib/python38.zip', '/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8', '/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8/lib-dynload', '/home/ren3/.local/lib/python3.8/site-packages', '/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8/site-packages', '/mnt/disk1_ssd/mengya/2D-robot-surgery-segmentation/DeepLabV3Plus_network']
+Seed everything
+/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  warnings.warn(
+/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=ResNet34_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet34_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/ren3/miniconda3/envs/ToolSeg/lib/python3.8/site-packages/torch/nn/modules/loss.py:217: UserWarning: NLLLoss2d has been deprecated. Please use NLLLoss instead as a drop-in replacement and see https://pytorch.org/docs/master/nn.html#torch.nn.NLLLoss for more details.
+  warnings.warn("NLLLoss2d has been deprecated. "
+Seed everything
+num train = 3514, num_val = 596
+Epoch 1, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:22<00:00, 158.00it/s, loss=9.50662]
+Valid loss: 89.8345, average IoU: 0.1470, average Dice: 0.1926
+class-wise iou: {'iou_1': 0.41415829347078964, 'iou_2': 0.0008446321404756613, 'iou_3': 0.0, 'iou_4': 0.6136597991523504, 'iou_5': 0.0, 'iou_6': 0.0, 'iou_7': 0.0}
+Saving the best model !!!!, best epoch: 1 , best_average_iou 0.14695181782337366
+best epoch so far: 1 best_average_iou so far: 0.14695181782337366
+Epoch 2, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:27<00:00, 125.58it/s, loss=6.07780]
+Valid loss: 88.3616, average IoU: 0.2114, average Dice: 0.2737
+class-wise iou: {'iou_1': 0.5779156820136891, 'iou_2': 0.02951133256205301, 'iou_3': 0.14429432853793595, 'iou_4': 0.7039027391865124, 'iou_5': 0.00366752031363622, 'iou_6': 0.006257606306649955, 'iou_7': 0.014178995166251648}
+Saving the best model !!!!, best epoch: 2 , best_average_iou 0.2113897434409612
+best epoch so far: 2 best_average_iou so far: 0.2113897434409612
+Epoch 3, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:24<00:00, 142.51it/s, loss=2.46495]
+Valid loss: 88.5969, average IoU: 0.2152, average Dice: 0.2687
+class-wise iou: {'iou_1': 0.5447834184532822, 'iou_2': 0.02593741536794938, 'iou_3': 0.004506063594271421, 'iou_4': 0.8126502737155158, 'iou_5': 0.0020653138786416213, 'iou_6': 0.09474601819733759, 'iou_7': 0.021426550055924642}
+Saving the best model !!!!, best epoch: 3 , best_average_iou 0.2151592933232747
+best epoch so far: 3 best_average_iou so far: 0.2151592933232747
+Epoch 4, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:21<00:00, 160.72it/s, loss=1.91688]
+Valid loss: 87.4601, average IoU: 0.1973, average Dice: 0.2406
+class-wise iou: {'iou_1': 0.5191223048971003, 'iou_2': 0.018797980092822325, 'iou_3': 0.026353972101083506, 'iou_4': 0.8075872500306597, 'iou_5': 0.0, 'iou_6': 4.478681476173414e-05, 'iou_7': 0.009420186113099499}
+best epoch so far: 3 best_average_iou so far: 0.2151592933232747
+Epoch 5, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:28<00:00, 122.03it/s, loss=1.40969]
+Valid loss: 86.9509, average IoU: 0.2182, average Dice: 0.2568
+class-wise iou: {'iou_1': 0.5945731142754803, 'iou_2': 0.029566733439106364, 'iou_3': 0.005828361633776962, 'iou_4': 0.8712281388999098, 'iou_5': 9.603964516552433e-06, 'iou_6': 0.02332883293039028, 'iou_7': 0.0031392366295317944}
+Saving the best model !!!!, best epoch: 5 , best_average_iou 0.2182391459675303
+best epoch so far: 5 best_average_iou so far: 0.2182391459675303
+Epoch 6, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:24<00:00, 143.98it/s, loss=1.11003]
+Valid loss: 86.6407, average IoU: 0.2243, average Dice: 0.2876
+class-wise iou: {'iou_1': 0.5607188699251847, 'iou_2': 0.031304104315899195, 'iou_3': 0.09867112851612729, 'iou_4': 0.7849924471245504, 'iou_5': 0.0, 'iou_6': 0.0869734306775796, 'iou_7': 0.007491307932183949}
+Saving the best model !!!!, best epoch: 6 , best_average_iou 0.22430732692736072
+best epoch so far: 6 best_average_iou so far: 0.22430732692736072
+Epoch 7, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:21<00:00, 160.55it/s, loss=1.04409]
+Valid loss: 85.9817, average IoU: 0.2324, average Dice: 0.2854
+class-wise iou: {'iou_1': 0.5488351956864688, 'iou_2': 0.029365330505358046, 'iou_3': 0.0226919274105506, 'iou_4': 0.8909207643873741, 'iou_5': 0.0, 'iou_6': 0.1167878430601952, 'iou_7': 0.01830859095421698}
+Saving the best model !!!!, best epoch: 7 , best_average_iou 0.2324156645720234
+best epoch so far: 7 best_average_iou so far: 0.2324156645720234
+Epoch 8, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:29<00:00, 120.55it/s, loss=1.13770]
+Valid loss: 89.8237, average IoU: 0.2045, average Dice: 0.2411
+class-wise iou: {'iou_1': 0.6300527367044589, 'iou_2': 0.004844395587733596, 'iou_3': 0.012919438827149557, 'iou_4': 0.7829852669795548, 'iou_5': 2.5247424762674207e-06, 'iou_6': 0.0, 'iou_7': 0.0006162378678169774}
+best epoch so far: 7 best_average_iou so far: 0.2324156645720234
+Epoch 9, lr 0.001: 100%|██████████████████████████████████████▉| 3514/3520 [00:24<00:00, 145.08it/s, loss=1.13916]
+Valid loss: 89.2702, average IoU: 0.1877, average Dice: 0.2412
+class-wise iou: {'iou_1': 0.2751202176128277, 'iou_2': 0.039406908318031314, 'iou_3': 0.04856808183530446, 'iou_4': 0.865234386642988, 'iou_5': 0.0064381381966995355, 'iou_6': 0.07569000497645753, 'iou_7': 0.003636208076659822}
+best epoch so far: 7 best_average_iou so far: 0.2324156645720234
+Epoch 10, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:21<00:00, 160.60it/s, loss=1.22970]
+Valid loss: 89.7900, average IoU: 0.2089, average Dice: 0.2740
+class-wise iou: {'iou_1': 0.42905823871598886, 'iou_2': 0.04146663947442593, 'iou_3': 0.08453143635863204, 'iou_4': 0.8036501535579512, 'iou_5': 0.005807502876116158, 'iou_6': 0.09509402248135308, 'iou_7': 0.0028893890777900166}
+best epoch so far: 7 best_average_iou so far: 0.2324156645720234
+Epoch 11, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:29<00:00, 120.96it/s, loss=1.04821]
+Valid loss: 84.5532, average IoU: 0.2283, average Dice: 0.2617
+class-wise iou: {'iou_1': 0.6612142641430504, 'iou_2': 0.024309790789529707, 'iou_3': 0.021794991392250482, 'iou_4': 0.8881593981348326, 'iou_5': 2.5987357150746163e-05, 'iou_6': 0.0, 'iou_7': 0.002618559037175985}
+best epoch so far: 7 best_average_iou so far: 0.2324156645720234
+Epoch 12, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 144.77it/s, loss=0.82204]
+Valid loss: 84.5288, average IoU: 0.2467, average Dice: 0.3122
+class-wise iou: {'iou_1': 0.6140187459008908, 'iou_2': 0.02728880727061764, 'iou_3': 0.12395694783581152, 'iou_4': 0.8280817198487451, 'iou_5': 0.0, 'iou_6': 0.10561560577937912, 'iou_7': 0.027700069533157613}
+Saving the best model !!!!, best epoch: 12 , best_average_iou 0.2466659851669431
+best epoch so far: 12 best_average_iou so far: 0.2466659851669431
+Epoch 13, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:21<00:00, 163.94it/s, loss=0.86889]
+Valid loss: 85.4756, average IoU: 0.2265, average Dice: 0.2781
+class-wise iou: {'iou_1': 0.6209320812404455, 'iou_2': 0.01940240059741726, 'iou_3': 0.07368968605376573, 'iou_4': 0.8158690815155294, 'iou_5': 0.003422398976777649, 'iou_6': 0.05251116679376838, 'iou_7': 0.0}
+best epoch so far: 12 best_average_iou so far: 0.2466659851669431
+Epoch 14, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:28<00:00, 122.91it/s, loss=0.91505]
+Valid loss: 84.5667, average IoU: 0.2634, average Dice: 0.3285
+class-wise iou: {'iou_1': 0.6449810553553276, 'iou_2': 0.011240294917176775, 'iou_3': 0.11539792346819884, 'iou_4': 0.8634312891911999, 'iou_5': 0.0, 'iou_6': 0.1826225935343262, 'iou_7': 0.02597608299675299}
+Saving the best model !!!!, best epoch: 14 , best_average_iou 0.26337846278042604
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 15, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 142.15it/s, loss=0.79762]
+Valid loss: 84.1615, average IoU: 0.2368, average Dice: 0.3082
+class-wise iou: {'iou_1': 0.4647791513364608, 'iou_2': 0.05162922168459047, 'iou_3': 0.13237984051789536, 'iou_4': 0.8517779182783177, 'iou_5': 0.0, 'iou_6': 0.15653046852759173, 'iou_7': 0.00022529903326233}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 16, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:21<00:00, 163.96it/s, loss=0.88392]
+Valid loss: 84.6359, average IoU: 0.2374, average Dice: 0.3145
+class-wise iou: {'iou_1': 0.4000559271482685, 'iou_2': 0.04811395415763814, 'iou_3': 0.18279441110733413, 'iou_4': 0.8460053990549813, 'iou_5': 0.0, 'iou_6': 0.18412467672960228, 'iou_7': 0.0008288928359976317}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 17, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:27<00:00, 126.13it/s, loss=0.86523]
+Valid loss: 86.0050, average IoU: 0.2533, average Dice: 0.3202
+class-wise iou: {'iou_1': 0.5478615919636544, 'iou_2': 0.010785677707635626, 'iou_3': 0.2504676068545543, 'iou_4': 0.8625386251454713, 'iou_5': 0.000161114416022209, 'iou_6': 0.09680965877570781, 'iou_7': 0.004145261293179805}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 18, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 143.14it/s, loss=0.77900]
+Valid loss: 83.9838, average IoU: 0.2422, average Dice: 0.2990
+class-wise iou: {'iou_1': 0.5146229367903074, 'iou_2': 0.028322901373798955, 'iou_3': 0.14469949057996442, 'iou_4': 0.9330388055833391, 'iou_5': 0.002045959760431563, 'iou_6': 0.07142450304721763, 'iou_7': 0.0013065378466193334}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 19, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:22<00:00, 153.46it/s, loss=0.76728]
+Valid loss: 82.4498, average IoU: 0.2543, average Dice: 0.3092
+class-wise iou: {'iou_1': 0.6478812696975633, 'iou_2': 0.028005198053278085, 'iou_3': 0.1524190951715134, 'iou_4': 0.8892438869838404, 'iou_5': 0.0, 'iou_6': 0.06238548119710322, 'iou_7': 0.0}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 20, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:26<00:00, 132.59it/s, loss=0.79053]
+Valid loss: 87.1236, average IoU: 0.2490, average Dice: 0.2977
+class-wise iou: {'iou_1': 0.6773641996061669, 'iou_2': 0.029707365617300963, 'iou_3': 0.0019180128809707165, 'iou_4': 0.8689063879851182, 'iou_5': 0.00016147100081744694, 'iou_6': 0.1609824205115187, 'iou_7': 0.003618521925789635}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 21, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 141.28it/s, loss=0.78370]
+Valid loss: 85.0726, average IoU: 0.2225, average Dice: 0.2809
+class-wise iou: {'iou_1': 0.5334409205124803, 'iou_2': 0.047721013286522805, 'iou_3': 0.013491920792213563, 'iou_4': 0.8181662613956595, 'iou_5': 0.0, 'iou_6': 0.14455454955918348, 'iou_7': 7.276564006476142e-05}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 22, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:22<00:00, 154.50it/s, loss=0.74003]
+Valid loss: 84.8064, average IoU: 0.2230, average Dice: 0.2797
+class-wise iou: {'iou_1': 0.4892860658864646, 'iou_2': 0.046934483761250145, 'iou_3': 0.10217528685310533, 'iou_4': 0.8738951229925103, 'iou_5': 0.0, 'iou_6': 0.04890426104952797, 'iou_7': 0.0}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 23, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 141.84it/s, loss=0.81304]
+Valid loss: 84.6102, average IoU: 0.2626, average Dice: 0.3241
+class-wise iou: {'iou_1': 0.6804802493676858, 'iou_2': 0.02278545187099907, 'iou_3': 0.26890742927719014, 'iou_4': 0.8192038630791094, 'iou_5': 0.0005032442479182463, 'iou_6': 0.04547975596228508, 'iou_7': 0.000835813892106691}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 24, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 143.06it/s, loss=0.75358]
+Valid loss: 84.9681, average IoU: 0.2220, average Dice: 0.2885
+class-wise iou: {'iou_1': 0.4067617703449095, 'iou_2': 0.05679601463490297, 'iou_3': 0.19382033919249522, 'iou_4': 0.8492030327857165, 'iou_5': 0.0, 'iou_6': 0.0473697061775957, 'iou_7': 0.0}
+best epoch so far: 14 best_average_iou so far: 0.26337846278042604
+Epoch 25, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:22<00:00, 154.70it/s, loss=0.72745]
+Valid loss: 83.1528, average IoU: 0.2768, average Dice: 0.3323
+class-wise iou: {'iou_1': 0.7504712236965021, 'iou_2': 0.025726156357588664, 'iou_3': 0.11312487626674834, 'iou_4': 0.8901149193749218, 'iou_5': 0.0, 'iou_6': 0.1571309087232654, 'iou_7': 0.0009281917137794279}
+Saving the best model !!!!, best epoch: 25 , best_average_iou 0.2767851823046865
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 26, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 148.37it/s, loss=0.74332]
+Valid loss: 81.5102, average IoU: 0.2521, average Dice: 0.2890
+class-wise iou: {'iou_1': 0.7439620360213917, 'iou_2': 0.028192224437133876, 'iou_3': 0.02253577447088058, 'iou_4': 0.9065425635456473, 'iou_5': 0.0007299747232633139, 'iou_6': 0.06112810119252276, 'iou_7': 0.0016703204927445453}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 27, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 142.67it/s, loss=0.75299]
+Valid loss: 83.2608, average IoU: 0.2234, average Dice: 0.2832
+class-wise iou: {'iou_1': 0.5015223600282106, 'iou_2': 0.03276227963438009, 'iou_3': 0.04207264142524521, 'iou_4': 0.8442846200523243, 'iou_5': 0.007192319543324197, 'iou_6': 0.13533172197248639, 'iou_7': 0.0007984251751717303}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 28, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:22<00:00, 154.23it/s, loss=0.79848]
+Valid loss: 84.3014, average IoU: 0.1997, average Dice: 0.2568
+class-wise iou: {'iou_1': 0.34158613184321784, 'iou_2': 0.05667855920623192, 'iou_3': 0.1493881006275419, 'iou_4': 0.8484491039502359, 'iou_5': 0.000834342806673346, 'iou_6': 0.0008626749313055147, 'iou_7': 1.606451509261193e-05}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 29, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 145.91it/s, loss=0.78431]
+Valid loss: 84.0264, average IoU: 0.2111, average Dice: 0.2606
+class-wise iou: {'iou_1': 0.526809883821704, 'iou_2': 0.031196537229974893, 'iou_3': 0.029301947529719076, 'iou_4': 0.8338319735365962, 'iou_5': 0.0, 'iou_6': 0.056683850324415606, 'iou_7': 0.0}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 30, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 141.92it/s, loss=1.03334]
+Valid loss: 88.7351, average IoU: 0.2322, average Dice: 0.2845
+class-wise iou: {'iou_1': 0.640138367522526, 'iou_2': 0.022809808879611527, 'iou_3': 0.03579367402925517, 'iou_4': 0.8188198586843379, 'iou_5': 0.004383858534362801, 'iou_6': 0.1036316999990535, 'iou_7': 3.1110004977600795e-05}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 31, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 152.76it/s, loss=0.71083]
+Valid loss: 81.2542, average IoU: 0.2383, average Dice: 0.2824
+class-wise iou: {'iou_1': 0.6648674178106141, 'iou_2': 0.03131868935232794, 'iou_3': 0.026970129067397784, 'iou_4': 0.8739672025113888, 'iou_5': 0.0, 'iou_6': 0.07062289562289563, 'iou_7': 0.00022870449300372165}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 32, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 145.95it/s, loss=0.68236]
+Valid loss: 81.0658, average IoU: 0.2556, average Dice: 0.2986
+class-wise iou: {'iou_1': 0.7373143884480506, 'iou_2': 0.016430558686093572, 'iou_3': 0.07273940395246871, 'iou_4': 0.8931864007940766, 'iou_5': 0.0010351365482421163, 'iou_6': 0.0682849896634769, 'iou_7': 0.0}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 33, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 143.93it/s, loss=0.66895]
+Valid loss: 80.1826, average IoU: 0.2681, average Dice: 0.3151
+class-wise iou: {'iou_1': 0.7291105041209526, 'iou_2': 0.012910425891505855, 'iou_3': 0.12418882597357557, 'iou_4': 0.9267976002471477, 'iou_5': 0.0, 'iou_6': 0.08342833690546765, 'iou_7': 0.00012802184906223995}
+best epoch so far: 25 best_average_iou so far: 0.2767851823046865
+Epoch 34, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:22<00:00, 156.70it/s, loss=0.62878]
+Valid loss: 80.5920, average IoU: 0.2943, average Dice: 0.3566
+class-wise iou: {'iou_1': 0.7618283762602891, 'iou_2': 0.03251569531640647, 'iou_3': 0.09993361959881344, 'iou_4': 0.872528274429818, 'iou_5': 0.0010136474319044114, 'iou_6': 0.2924484773915718, 'iou_7': 0.0}
+Saving the best model !!!!, best epoch: 34 , best_average_iou 0.2943240129184005
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 35, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 145.52it/s, loss=0.64746]
+Valid loss: 82.1697, average IoU: 0.2740, average Dice: 0.3320
+class-wise iou: {'iou_1': 0.695099823474959, 'iou_2': 0.021864569557276906, 'iou_3': 0.20660543549883678, 'iou_4': 0.901519885983791, 'iou_5': 0.00015637960809910387, 'iou_6': 0.0929693869987399, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 36, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 141.52it/s, loss=0.81604]
+Valid loss: 84.0056, average IoU: 0.2200, average Dice: 0.2625
+class-wise iou: {'iou_1': 0.6848487047586617, 'iou_2': 0.03465620985734568, 'iou_3': 0.03883057505312641, 'iou_4': 0.7778731842462309, 'iou_5': 0.0, 'iou_6': 0.003960136088654538, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 37, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 152.23it/s, loss=0.89009]
+Valid loss: 82.9668, average IoU: 0.2448, average Dice: 0.3039
+class-wise iou: {'iou_1': 0.6246323128031567, 'iou_2': 0.03547415150373851, 'iou_3': 0.07820313281867405, 'iou_4': 0.8489079456440156, 'iou_5': 0.0019314859028355287, 'iou_6': 0.12359135414742287, 'iou_7': 0.001188166463625562}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 38, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 144.92it/s, loss=0.77612]
+Valid loss: 87.6116, average IoU: 0.2189, average Dice: 0.2912
+class-wise iou: {'iou_1': 0.5795471433762271, 'iou_2': 0.059092411946701645, 'iou_3': 0.17488940254412416, 'iou_4': 0.6701118209772909, 'iou_5': 0.0, 'iou_6': 0.04856997346342509, 'iou_7': 3.1686682087518616e-05}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 39, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:25<00:00, 140.27it/s, loss=0.84669]
+Valid loss: 82.6539, average IoU: 0.2290, average Dice: 0.2947
+class-wise iou: {'iou_1': 0.630387927000468, 'iou_2': 0.055231326008281435, 'iou_3': 0.15312780857965846, 'iou_4': 0.7228095153745289, 'iou_5': 0.0008683008179945007, 'iou_6': 0.040759840340296595, 'iou_7': 3.36717342626732e-05}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 40, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:22<00:00, 155.24it/s, loss=0.80645]
+Valid loss: 85.2820, average IoU: 0.2453, average Dice: 0.2994
+class-wise iou: {'iou_1': 0.7220953522674669, 'iou_2': 0.05118358263354679, 'iou_3': 0.08605498971828641, 'iou_4': 0.7975548031909557, 'iou_5': 0.0032356339087855476, 'iou_6': 0.05684642147117296, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 41, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 144.57it/s, loss=0.69539]
+Valid loss: 80.8901, average IoU: 0.2593, average Dice: 0.3240
+class-wise iou: {'iou_1': 0.6591839514184312, 'iou_2': 0.04424622425878062, 'iou_3': 0.10792030254032312, 'iou_4': 0.8412668878059342, 'iou_5': 0.0, 'iou_6': 0.16260585351359383, 'iou_7': 6.375382522951378e-05}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 42, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 142.42it/s, loss=1.03353]
+Valid loss: 84.7580, average IoU: 0.1956, average Dice: 0.2474
+class-wise iou: {'iou_1': 0.6029312739234084, 'iou_2': 0.035208000412392394, 'iou_3': 0.0019258103371464536, 'iou_4': 0.6754712260697027, 'iou_5': 0.0, 'iou_6': 0.05338046387725567, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 43, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 151.54it/s, loss=0.81228]
+Valid loss: 83.6987, average IoU: 0.2316, average Dice: 0.2810
+class-wise iou: {'iou_1': 0.6095227038336739, 'iou_2': 0.040264683229045445, 'iou_3': 0.04079300836376008, 'iou_4': 0.8629224894928995, 'iou_5': 0.00043334030662562387, 'iou_6': 0.06741415229044263, 'iou_7': 8.209001169782666e-05}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 44, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 144.30it/s, loss=0.66731]
+Valid loss: 81.9949, average IoU: 0.2303, average Dice: 0.2802
+class-wise iou: {'iou_1': 0.6156073141275988, 'iou_2': 0.040500457191284374, 'iou_3': 0.0772507889363282, 'iou_4': 0.8476235799142376, 'iou_5': 0.002049013941892066, 'iou_6': 0.029024107081882126, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 45, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:25<00:00, 140.26it/s, loss=0.73836]
+Valid loss: 84.3258, average IoU: 0.2241, average Dice: 0.2856
+class-wise iou: {'iou_1': 0.5039546651764393, 'iou_2': 0.04336897519098835, 'iou_3': 0.04318468902702523, 'iou_4': 0.8327624038246868, 'iou_5': 3.11215487997855e-05, 'iou_6': 0.14479561845325184, 'iou_7': 0.0006163414531650534}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 46, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 151.25it/s, loss=0.61408]
+Valid loss: 82.7439, average IoU: 0.2417, average Dice: 0.2860
+class-wise iou: {'iou_1': 0.6767201490919064, 'iou_2': 0.022233721846812965, 'iou_3': 0.016089594906619615, 'iou_4': 0.8741811301503407, 'iou_5': 0.0007382216323822163, 'iou_6': 0.10173101210965553, 'iou_7': 0.0004324057201099546}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 47, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:24<00:00, 146.29it/s, loss=0.73886]
+Valid loss: 82.7010, average IoU: 0.2635, average Dice: 0.3319
+class-wise iou: {'iou_1': 0.508886993560706, 'iou_2': 0.054395609999898, 'iou_3': 0.027212555860988683, 'iou_4': 0.8662214363174859, 'iou_5': 0.0001384672737924056, 'iou_6': 0.3822891735886245, 'iou_7': 0.005561553975594353}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 48, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:25<00:00, 136.16it/s, loss=0.58230]
+Valid loss: 82.1610, average IoU: 0.2674, average Dice: 0.3266
+class-wise iou: {'iou_1': 0.6446985131527578, 'iou_2': 0.04489127014405418, 'iou_3': 0.06439619754667168, 'iou_4': 0.9128461588840133, 'iou_5': 0.0, 'iou_6': 0.20512140108796603, 'iou_7': 6.637902422834384e-05}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 49, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 149.79it/s, loss=0.62080]
+Valid loss: 83.7094, average IoU: 0.2632, average Dice: 0.3330
+class-wise iou: {'iou_1': 0.6004664703322333, 'iou_2': 0.07514103816261651, 'iou_3': 0.23962904896501214, 'iou_4': 0.8570046237734851, 'iou_5': 0.0, 'iou_6': 0.06919088766692852, 'iou_7': 0.0010726256983240223}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 50, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 149.25it/s, loss=0.55284]
+Valid loss: 80.7835, average IoU: 0.2618, average Dice: 0.3254
+class-wise iou: {'iou_1': 0.6165080385160577, 'iou_2': 0.06125163355732723, 'iou_3': 0.16319844737121741, 'iou_4': 0.8960686762864055, 'iou_5': 0.0, 'iou_6': 0.09531534679411985, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 51, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:28<00:00, 125.38it/s, loss=0.60287]
+Valid loss: 84.2724, average IoU: 0.2637, average Dice: 0.3172
+class-wise iou: {'iou_1': 0.7353367122259848, 'iou_2': 0.040311904852429324, 'iou_3': 0.07847975549947014, 'iou_4': 0.869239452579724, 'iou_5': 4.579498003755188e-05, 'iou_6': 0.11945403200502039, 'iou_7': 0.0030153374733101887}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 52, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 150.14it/s, loss=0.68288]
+Valid loss: 83.4153, average IoU: 0.2258, average Dice: 0.2639
+class-wise iou: {'iou_1': 0.6956922155832574, 'iou_2': 0.0, 'iou_3': 0.02459876125752522, 'iou_4': 0.8213857023434773, 'iou_5': 0.010075291892481722, 'iou_6': 0.027586206896551724, 'iou_7': 0.0014518419247275803}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 53, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 149.77it/s, loss=0.65119]
+Valid loss: 83.9615, average IoU: 0.2667, average Dice: 0.3349
+class-wise iou: {'iou_1': 0.6713277690297915, 'iou_2': 0.04450675918821844, 'iou_3': 0.31499251835870185, 'iou_4': 0.7863783488018958, 'iou_5': 0.0017411739571649841, 'iou_6': 0.04456164768218389, 'iou_7': 0.0036740375618995458}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 54, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:28<00:00, 124.75it/s, loss=0.67541]
+Valid loss: 80.4919, average IoU: 0.2907, average Dice: 0.3377
+class-wise iou: {'iou_1': 0.8754000510494591, 'iou_2': 0.06381674204943663, 'iou_3': 0.049758263827871727, 'iou_4': 0.8852387355293538, 'iou_5': 0.0, 'iou_6': 0.16055400623374189, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 55, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 151.16it/s, loss=0.53752]
+Valid loss: 80.9623, average IoU: 0.2888, average Dice: 0.3405
+class-wise iou: {'iou_1': 0.8434110696408645, 'iou_2': 0.026145368049365448, 'iou_3': 0.2650497092806723, 'iou_4': 0.8440627927896666, 'iou_5': 0.0005641094856913456, 'iou_6': 0.04260889282843067, 'iou_7': 4.673916430374225e-05}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 56, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 149.23it/s, loss=0.52572]
+Valid loss: 78.8470, average IoU: 0.2740, average Dice: 0.3222
+class-wise iou: {'iou_1': 0.8298378085814841, 'iou_2': 0.023797872420516914, 'iou_3': 0.10291403106343211, 'iou_4': 0.8546759967691878, 'iou_5': 0.002616814775379827, 'iou_6': 0.10397745067334795, 'iou_7': 0.00016630238525135418}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 57, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:28<00:00, 124.05it/s, loss=0.56287]
+Valid loss: 80.7783, average IoU: 0.2871, average Dice: 0.3466
+class-wise iou: {'iou_1': 0.750857777274913, 'iou_2': 0.07573617346423464, 'iou_3': 0.13230045756597275, 'iou_4': 0.9161724024224793, 'iou_5': 0.00022631392643056514, 'iou_6': 0.13343515690086089, 'iou_7': 0.0008352550251484393}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 58, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 152.25it/s, loss=0.56194]
+Valid loss: 81.1658, average IoU: 0.2704, average Dice: 0.3243
+class-wise iou: {'iou_1': 0.7005520010988943, 'iou_2': 0.08737654358026617, 'iou_3': 0.02155684484971868, 'iou_4': 0.9159686681504617, 'iou_5': 0.0, 'iou_6': 0.16720949168314528, 'iou_7': 0.0004419129922419719}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 59, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:23<00:00, 148.97it/s, loss=0.52939]
+Valid loss: 78.8996, average IoU: 0.2669, average Dice: 0.3118
+class-wise iou: {'iou_1': 0.7760870035343579, 'iou_2': 0.02967924587985955, 'iou_3': 0.09725026031152383, 'iou_4': 0.8968042635089611, 'iou_5': 0.00012948575656677766, 'iou_6': 0.06829985016220305, 'iou_7': 0.0}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
+Epoch 60, lr 0.001: 100%|█████████████████████████████████████▉| 3514/3520 [00:28<00:00, 122.84it/s, loss=0.49305]
+Valid loss: 80.9428, average IoU: 0.2746, average Dice: 0.3284
+class-wise iou: {'iou_1': 0.7692573399997757, 'iou_2': 0.06517800410289926, 'iou_3': 0.10569602800657003, 'iou_4': 0.885791445586597, 'iou_5': 0.0, 'iou_6': 0.09655172413793103, 'iou_7': 3.993371004133139e-05}
+best epoch so far: 34 best_average_iou so far: 0.2943240129184005
