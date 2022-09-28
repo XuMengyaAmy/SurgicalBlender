@@ -1,7 +1,76 @@
 # SurgicalBlender
+This repository includes the reference code and dataset mentioned in the paper *Surgical Blender: A Synthetic Video Dataset Generator for Robot-Assisted Surgery*
+
+Surgical Blender is an open-source surgical dataset generation framework that integrates with smoke, blood, and vessel vibration to generate realistic surgical videos with rich annotations. We demonstrate the effectiveness of Surgical Blender by developing 17 synthetic surgical videos and 7 semi-synthetic surgical videos for tasks ranging from segmentation tasks (surgical instrument segmentation and bleeding source segmentation) to image-to-image translation (smoke removal and blood removal). 
+
+![img](workflow_v4.png)
+
 Project page is available from [here](https://sites.google.com/view/surgicalblender/home) for video demonstration.
 
-# Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
+
+# Dataset
+Fully-synthetic video dataset is available in : https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/fully-synthetic-dataset?csf=1&web=1&e=uOc8R7
+
+Semi-synthetic video dataset is available in : https://mycuhk-my.sharepoint.com/:f:/r/personal/1155175013_link_cuhk_edu_hk/Documents/surgical-blender-dataset/semi-synthetic-dataset?csf=1&web=1&e=e8xbtB
+
+# Evaluation
+## 1.Download pretrained model
+To reproduce the results of DeepLabv3+ and LinkNet34 by using different datasets reported in our paper, first download the pretrained model file: https://drive.google.com/drive/folders/181lxqt1V43ki5AMRxQzuw_yQqW3xatxc?usp=sharing
+
+
+## 2.Sim-to-Real instrument segmentation 
+(All results are evaluated on the **Real Dataset**)
+
+### 2.1. Using Real dataset </br>
+*Deeplabv3+*
+Run  `python test.py --model DeepLabv3_plus --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/real_dataset/DeepLabv3_plus/best_model.pt`
+
+*LinkNet34*  </br>
+Run  `python test.py --model LinkNet34 --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/real_dataset/LinkNet34/best_model.pt`
+
+### 2.2. Using Semi-Part Dataset  
+*Deeplabv3+* </br>
+Run  `python test.py --model DeepLabv3_plus --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/semi_part_dataset/DeepLabv3_plus/best_model.pt`
+
+*LinkNet34*  </br>
+Run  `python test.py --model LinkNet34 --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/real_dataset/LinkNet34/best_model.pt`
+
+### 2.3. Using Semi-full Dataset
+*Deeplabv3+* </br>
+Run  `python test.py --model DeepLabv3_plus --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/semi_full_dataset/DeepLabv3_plus/best_model.pt`
+
+*LinkNet34*  </br>
+Run  `python test.py --model LinkNet34 --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/semi_full_dataset/LinkNet34/best_model.pt`
+
+### 2.3. Using Semi-full Dataset with 50 Real images
+*Deeplabv3+* </br>
+Run  `python test.py --model DeepLabv3_plus --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/semi_withReal_dataset/DeepLabv3_plus/best_model.pt`
+
+*LinkNet34*  </br>
+Run  `python test.py --model LinkNet34 --type instruments --checkpoint /SurgicalBlender/Segmentation/runs/instrument_segmentation/semi_withReal_dataset/LinkNet34/best_model.pt`
+
+## 3.Sim-to-Real bleeding source segmentation
+
+### Using Fully-Synthetic Dataset
+
+3.1 Change the validation set
+
+
+*Deeplabv3+* </br>
+Run  `python test.py --model DeepLabv3_plus --type binary --checkpoint /SurgicalBlender/Segmentation/runs/bleeding_source_segmentation/DeepLabv3_plus/best_model.pt`
+
+*LinkNet34*  </br>
+Run  `python test.py --model LinkNet34 --type binary --checkpoint /SurgicalBlender/Segmentation/runs/bleeding_source_segmentation/LinkNet34/best_model.pt`
+
+# Training
+
+## 1. Sim-to-Real instrument segmentation
+
+### 1.1. Using Real dataset </br>
+
+
+
+# Image-to-Image Translation: Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
 
 <img src = "DeBlood_DeSmoke/imgs/VisualComparison.png" width=961>
 
