@@ -3,7 +3,7 @@ This repository includes the reference code and dataset mentioned in the paper *
 
 Surgical Blender is an open-source surgical dataset generation framework that integrates with smoke, blood, and vessel vibration to generate realistic surgical videos with rich annotations. We demonstrate the effectiveness of Surgical Blender by developing 17 synthetic surgical videos and 7 semi-synthetic surgical videos for tasks ranging from segmentation tasks (surgical instrument segmentation and bleeding source segmentation) to image-to-image translation (smoke removal and blood removal). 
 
-![Segmentation/img](workflow_v4.png)
+![img](Segmentation/images/workflow.png)
 
 # Task 1: Segmentation
 # Dataset
