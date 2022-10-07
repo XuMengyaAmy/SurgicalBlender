@@ -8,7 +8,7 @@
 ```pip install -r requirements.txt```
 ### Datasets
 
-Use our <a href="">dataset</a> own dataset by creating the appropriate folders and adding in the images.
+Use our <a href="https://gocuhk-my.sharepoint.com/:f:/g/personal/muhammadomerraza_cuhk_edu_hk/EqJ_9PsR4R5EsiUc9W8JKwYBuk8Z-wtSYb2xGq3y4n5wWw">dataset</a> (kinldy request the password from us) or your own dataset by creating the appropriate folders and adding in the images.
 - Create a dataset folder under `/dataset` for your dataset.
 - Create subfolders `testA`, `testB`, `trainA`, and `trainB` under your dataset's folder. For example, place clear images in the `trainA` folder, hazy images in the `trainB` folder, and do the same for the `testA` and `testB` folders.
 

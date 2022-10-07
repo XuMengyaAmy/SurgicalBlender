@@ -5,12 +5,17 @@ from pathlib import Path
 import utils
 
 def get_split(dataset, fold, add_real='False', change_test_set='False'):
-
+    print('change_test_set',change_test_set)
     train_file_names = []
     val_file_names = []
     
 
     ###instrumennt segmentation
+    
+    # Real dataset
+    if dataset == 'real':
+        train_file_names = list((real_data_path/'train/images').glob('*.png'))
+        val_file_names = list((real_data_path/'val/images').glob('*.png'))
 
     # Semi-Part dataset
     if dataset == 'semi_part':

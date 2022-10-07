@@ -1,0 +1,20 @@
+{
+ "add_real": "False",
+ "batch_size": 64,
+ "cfg": "./configs/swin_tiny_patch4_window7_224_lite.yaml",
+ "dataset": "fully_synthetic",
+ "device_ids": "0,1",
+ "fold": 0,
+ "img_size": 224,
+ "jaccard_weight": 0.5,
+ "lr": 0.001,
+ "model": "LinkNet34",
+ "n_epochs": 60,
+ "root": "runs/binary/LinkNet34",
+ "train_crop_height": 224,
+ "train_crop_width": 224,
+ "type": "instruments",
+ "val_crop_height": 224,
+ "val_crop_width": 224,
+ "workers": 12
+}
