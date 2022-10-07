@@ -118,7 +118,7 @@ Our code is inspired by [MICCAI 2017 Robotic Instrument Segmentation](https://gi
 
 # Task 2: Image-to-Image Translation (De-Blood and De-Smoke)
 
-# Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
+## Investigation of the ability to remove smoke and blood in 3D surgical images using unpaired and paired data
 
 <img src = "DeBlood_DeSmoke/imgs/VisualComparison.png" width=961>
 
