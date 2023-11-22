@@ -7,7 +7,7 @@ Surgical Blender is an open-source surgical dataset generation framework that in
 
 # Task 1: Segmentation
 # Dataset
-Fully-synthetic video dataset and Semi-Synthetic video dataset are available from [here](https://t.ly/sPNUF)
+Fully-synthetic video dataset and Semi-Synthetic video dataset are available from [here](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155175013_link_cuhk_edu_hk/EoFC1Z5QCRpEjK-_vpYgIjsBkHKhPCe0iGWh5F7YnU_58g?e=FUbsAH)
 
 # Evaluation
 ## 1.Download pretrained model
