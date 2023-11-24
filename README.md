@@ -11,7 +11,7 @@ Fully-synthetic video dataset and Semi-Synthetic video dataset are available fro
 
 # Evaluation
 ## 1.Download pretrained model
-To reproduce the results of DeepLabv3+ and LinkNet34 by using different datasets reported in our paper, first download the [pretrained models](https://t.ly/TBWR) 
+To reproduce the results of DeepLabv3+ and LinkNet34 by using different datasets reported in our paper, first download the [pretrained models](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155175013_link_cuhk_edu_hk/Evs3xwXu1GlEpgYc2Sq66xUBQJnZkt3Be9orransOlbOOQ?e=EPrdh0)
 
 
 ## 2.Sim-to-Real instrument segmentation 
